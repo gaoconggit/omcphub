@@ -1,212 +1,635 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMCPHub - 获取最新的MCP服务器</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <title>OMcpHub - Discover MCP Servers</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header>
-        <div class="container">
+        <nav>
             <div class="logo">
-                <h1>OMCP<span>Hub</span></h1>
+                <div class="logo">
+                    <img src="https://mintlify.s3.us-west-1.amazonaws.com/mcp/logo/dark.svg" alt="Omcphub Logo" width="160">
+                    OMcpHub
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">首页</a></li>
-                    <li><a href="#servers">服务器</a></li>
-                    <li><a href="#features">特色</a></li>
-                    <li><a href="#about">关于</a></li>
-                    <li><a href="#contact">联系我们</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul>
+                <li><a href="#">提交服务器</a></li>
+                <li><a href="#">登录</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>发现最佳MCP服务器</h2>
-                <p>获取最新和最酷的MCP服务器，提升您的游戏体验。</p>
-                <a href="#servers" class="btn">浏览服务器</a>
+    <main>
+        <div class="hero-wrapper">
+            <div class="hero-text-container">
+                <p class="hero-text">
+                    通过<a href="https://modelcontextprotocol.io/" target="_blank" rel="noreferrer" class="mcp-link">模型上下文协议</a>服务器，为您的智能体扩展<span id="server-count">3,542</span>种能力。
+                </p>
             </div>
-        </div>
-    </section>
-
-    <section id="servers" class="servers">
-        <div class="container">
-            <h2 class="section-title">精选服务器</h2>
-            <div class="server-grid">
-                <div class="server-card">
-                    <div class="server-img">
-                        <img src="https://via.placeholder.com/300x200" alt="服务器1">
-                    </div>
-                    <div class="server-info">
-                        <h3>终极生存</h3>
-                        <p>具有自定义插件的经典生存体验。</p>
-                        <div class="server-meta">
-                            <span class="server-players">玩家数: 120/500</span>
-                            <span class="server-version">版本: 1.19.2</span>
+            <div class="search-wrapper">
+                 <div class="search-form-container">
+                    <form>
+                        <div class="search-input-wrapper">
+                            <input type="text" placeholder="输入服务器名" class="search-input" value="">
+                            <button class="search-button" type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                                <span class="sr-only">Search</span>
+                            </button>
                         </div>
-                        <a href="#" class="btn">获取服务器</a>
-                    </div>
-                </div>
-                <div class="server-card">
-                    <div class="server-img">
-                        <img src="https://via.placeholder.com/300x200" alt="服务器2">
-                    </div>
-                    <div class="server-info">
-                        <h3>创意世界</h3>
-                        <p>通过无限资源释放您的创造力。</p>
-                        <div class="server-meta">
-                            <span class="server-players">玩家数: 85/200</span>
-                            <span class="server-version">版本: 1.18.1</span>
-                        </div>
-                        <a href="#" class="btn">获取服务器</a>
-                    </div>
-                </div>
-                <div class="server-card">
-                    <div class="server-img">
-                        <img src="https://via.placeholder.com/300x200" alt="服务器3">
-                    </div>
-                    <div class="server-info">
-                        <h3>PVP竞技场</h3>
-                        <p>在各种PVP游戏模式中与其他玩家竞争。</p>
-                        <div class="server-meta">
-                            <span class="server-players">玩家数: 250/1000</span>
-                            <span class="server-version">版本: 1.19.0</span>
-                        </div>
-                        <a href="#" class="btn">获取服务器</a>
-                    </div>
-                </div>
-                <div class="server-card">
-                    <div class="server-img">
-                        <img src="https://via.placeholder.com/300x200" alt="服务器4">
-                    </div>
-                    <div class="server-info">
-                        <h3>RPG冒险</h3>
-                        <p>在这个角色扮演服务器中开始史诗级任务。</p>
-                        <div class="server-meta">
-                            <span class="server-players">玩家数: 175/300</span>
-                            <span class="server-version">版本: 1.18.2</span>
-                        </div>
-                        <a href="#" class="btn">获取服务器</a>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">为什么选择OMCPHub？</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>高性能</h3>
-                    <p>我们所有的服务器都经过优化，以实现最大性能和最小延迟。</p>
+        <section id="featured">
+            <h2>精选 <span class="section-count">(849)</span> <a href="#" class="view-all">View all</a></h2>
+            <div class="hub-grid">
+                <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Sequential Thinking</a></h3>
+                        <div class="author"><a href="#">@smithery-ai/server-sequential-thinking</a></div>
+                    </div>
+                    <p class="description">An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process.</p>
+                    <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">680.35k</span>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>安全服务器</h3>
-                    <p>先进的安全措施保护您的游戏和数据。</p>
+                <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Desktop Commander</a></h3>
+                        <div class="author"><a href="#">@wonderwhy-er/desktop-commander</a></div>
+                    </div>
+                    <p class="description">Execute terminal commands and manage files with diff editing capabilities. Coding, shell and terminal, task automation</p>
+                    <div class="card-bottom">
+                        <span class="tag local">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                            Local
+                        </span>
+                        <span class="usage">322.10k</span>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3>自定义插件</h3>
-                    <p>通过我们自主开发的插件获得独特的游戏体验。</p>
+                <div class="hub-card">
+                    <div class="card-top">
+                         <h3>
+                            <img alt="Github" class="title-icon" src="https://icons.duckduckgo.com/ip3/github.com.ico">
+                            <a href="#">Github</a>
+                        </h3>
+                        <div class="author"><a href="#">@smithery-ai/github</a></div>
+                    </div>
+                    <p class="description">Access the GitHub API, enabling file operations, repository management, search functionality, and more.</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                           Remote
+                        </span>
+                        <span class="usage">227.01k</span>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>即时访问</h3>
-                    <p>购买后立即访问任何服务器。</p>
+                 <div class="hub-card">
+                     <div class="card-top">
+                        <h3><a href="#">Think Tool Server</a></h3>
+                        <div class="author"><a href="#">@PhillipRt/think-mcp-server</a></div>
+                    </div>
+                    <p class="description">Enhance your AI's reasoning capabilities with structured thinking. This server provides a dedicated space for complex problem-solving...</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">198.19k</span>
+                    </div>
+                </div>
+                 <div class="hub-card">
+                     <div class="card-top">
+                        <h3>
+                            <img alt="Brave Search" class="title-icon" src="https://icons.duckduckgo.com/ip3/brave.com.ico">
+                            <a href="#">Brave Search</a>
+                        </h3>
+                        <div class="author"><a href="#">@smithery-ai/brave-search</a></div>
+                    </div>
+                    <p class="description">Integrate web search and local search capabilities with Brave.</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">154.84k</span>
+                    </div>
+                </div>
+                 <div class="hub-card">
+                     <div class="card-top">
+                         <h3>
+                            <img alt="Magic MCP" class="title-icon" src="https://icons.duckduckgo.com/ip3/21st.dev.ico">
+                            <a href="#">Magic MCP</a>
+                         </h3>
+                        <div class="author"><a href="#">@21st-dev/magic-mcp</a></div>
+                    </div>
+                    <p class="description">v0 for MCP. Frontend feels like Magic</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">70.59k</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">关于OMCPHub</h2>
-                <p>OMCPHub是寻找高质量MCP服务器的首选平台。我们的平台将玩家与最佳服务器体验连接起来，由我们的游戏爱好者团队精心策划。</p>
-                <p>我们与服务器开发者密切合作，确保所有列表都符合我们对性能、安全性和有趣游戏玩法的高标准。</p>
+        <section id="web-search">
+            <h2>网页搜索 <span class="section-count">(101)</span> <a href="#" class="view-all">View all</a></h2>
+            <div class="hub-grid">
+                 <div class="hub-card">
+                     <div class="card-top">
+                        <h3>
+                            <img alt="Brave Search" class="title-icon" src="https://icons.duckduckgo.com/ip3/brave.com.ico">
+                            <a href="#">Brave Search</a>
+                        </h3>
+                        <div class="author"><a href="#">@smithery-ai/brave-search</a></div>
+                    </div>
+                    <p class="description">Integrate web search and local search capabilities with Brave.</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">154.84k</span>
+                    </div>
+                </div>
+                <div class="hub-card">
+                    <div class="card-top">
+                         <h3>
+                            <img alt="Exa Search" class="title-icon" src="https://icons.duckduckgo.com/ip3/exa.ai.ico">
+                            <a href="#">Exa Search</a>
+                        </h3>
+                        <div class="author"><a href="#">exa</a></div>
+                    </div>
+                    <p class="description">Fast, intelligent web search and crawling. Exa combines embeddings and traditional search to deliver the best results for LLMs.</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">25.96k</span>
+                    </div>
+                 </div>
+                 <div class="hub-card">
+                     <div class="card-top">
+                        <h3>
+                             <img alt="Perplexity Search" class="title-icon" src="https://icons.duckduckgo.com/ip3/docs.perplexity.ai.ico">
+                            <a href="#">Perplexity Search</a>
+                        </h3>
+                        <div class="author"><a href="#">@arjunkmrm/perplexity-search</a></div>
+                    </div>
+                    <p class="description">Enable AI assistants to perform web searches using Perplexity's Sonar Pro.</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">51.43k</span>
+                    </div>
+                 </div>
+                 <div class="hub-card">
+                     <div class="card-top">
+                        <h3>
+                            <img alt="Serper Search and Scrape" class="title-icon" src="https://icons.duckduckgo.com/ip3/serper.dev.ico">
+                            <a href="#">Serper Search and Scrape</a>
+                        </h3>
+                        <div class="author"><a href="#">@marcopesani/mcp-server-serper</a></div>
+                    </div>
+                    <p class="description">A TypeScript-based MCP server that provides web search and webpage scraping capabilities using the Serper API...</p>
+                      <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">3.35k</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                     <div class="card-top">
+                        <h3>
+                            <img alt="DuckDuckGo Search Server" class="title-icon" src="https://icons.duckduckgo.com/ip3/duckduckgo.com.ico">
+                            <a href="#">DuckDuckGo Search Server</a>
+                        </h3>
+                        <div class="author"><a href="#">@nickclyde/duckduckgo-mcp-server</a></div>
+                    </div>
+                    <p class="description">Enable web search capabilities through DuckDuckGo. Fetch and parse webpage content intelligently for enhanced LLM interaction.</p>
+                      <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">13.44k</span>
+                    </div>
+                 </div>
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="Tavily" class="title-icon" src="https://icons.duckduckgo.com/ip3/tavily.com.ico">
+                            <a href="#">Tavily</a>
+                        </h3>
+                        <div class="author"><a href="#">mcp-tavily</a></div>
+                    </div>
+                    <p class="description">An MCP server for Tavily's search API providing AI-powered web search capabilities.</p>
+                    <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">4.12k</span>
+                    </div>
+                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">联系我们</h2>
-            <div class="contact-content">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" required>
+        <section id="browser-automation">
+            <h2>浏览器自动化 <span class="section-count">(67)</span> <a href="#" class="view-all">View all</a></h2>
+             <div class="hub-grid">
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="Browserbase" class="title-icon" src="https://icons.duckduckgo.com/ip3/www.browserbase.com.ico">
+                            <a href="#">Browserbase</a>
+                        </h3>
+                        <div class="author"><a href="#">@browserbasehq/mcp-browserbase</a></div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">邮箱</label>
-                        <input type="email" id="email" name="email" required>
+                    <p class="description">Provides cloud browser automation capabilities using Browserbase, enabling LLMs to interact with web pages...</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                           Remote
+                        </span>
+                        <span class="usage">44.90k</span>
                     </div>
-                    <div class="form-group">
-                        <label for="message">留言</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                 </div>
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="Stagehand" class="title-icon" src="https://icons.duckduckgo.com/ip3/www.browserbase.com.ico">
+                            <a href="#">Stagehand</a>
+                        </h3>
+                        <div class="author"><a href="#">@browserbasehq/mcp-stagehand</a></div>
                     </div>
-                    <button type="submit" class="btn">发送留言</button>
-                </form>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>邮箱</h3>
-                        <p>info@omcphub.com</p>
+                    <p class="description">Provides cloud browser automation capabilities using Stagehand, enabling LLMs to interact with web pages...</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                           Remote
+                        </span>
+                        <span class="usage">7.81k</span>
                     </div>
-                    <div class="contact-item">
-                        <h3>Discord</h3>
-                        <p>discord.gg/omcphub</p>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="Hyperbrowser" class="title-icon" src="https://icons.duckduckgo.com/ip3/app.hyperbrowser.ai.ico">
+                            <a href="#">Hyperbrowser</a>
+                        </h3>
+                        <div class="author"><a href="#">@hyperbrowserai/mcp</a></div>
                     </div>
-                    <div class="contact-item">
-                        <h3>客服时间</h3>
-                        <p>周一至周五: 上午9点 - 下午6点 (东部标准时间)</p>
+                    <p class="description">Scrape, extract structured data, and crawl webpages effortlessly. Enhance your applications with powerful web scraping...</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">7.23k</span>
+                    </div>
+                 </div>
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Playwright</a></h3>
+                        <div class="author"><a href="#">@showfive/playwright-mcp-server</a></div>
+                    </div>
+                    <p class="description">Control browsers and automate web interactions seamlessly.</p>
+                    <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">12.52k</span>
+                    </div>
+                 </div>
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="Playwright Automation" class="title-icon" src="https://icons.duckduckgo.com/ip3/www.microsoft.com.ico">
+                            <a href="#">Playwright Automation</a>
+                        </h3>
+                        <div class="author"><a href="#">@microsoft/playwright-mcp</a></div>
+                    </div>
+                    <p class="description">Automate web interactions effortlessly with this server. Enable your LLMs to navigate, extract data, and perform actions...</p>
+                    <div class="card-bottom">
+                        <span class="tag local">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                            Local
+                        </span>
+                        <span class="usage">1.74k</span>
+                    </div>
+                 </div>
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Browser Automation Agent</a></h3>
+                        <div class="author"><a href="#">@ashley-ha/mcp-manus</a></div>
+                    </div>
+                    <p class="description">Automate browser interactions seamlessly with our agent. Leverage the power of the Model Context Protocol...</p>
+                    <div class="card-bottom">
+                        <span class="tag remote">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">2.00k</span>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+         <section id="memory-management">
+            <h2>内存管理 <span class="section-count">(45)</span> <a href="#" class="view-all">View all</a></h2>
+             <div class="hub-grid">
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="Knowledge Graph Memory Server" class="title-icon" src="https://icons.duckduckgo.com/ip3/modelcontextprotocol.io.ico">
+                            <a href="#">Knowledge Graph Memory Server</a>
+                        </h3>
+                        <div class="author"><a href="#">@jlia0/servers</a></div>
+                    </div>
+                    <p class="description">Enable your agents to remember user information across chats by utilizing a local knowledge graph...</p>
+                     <div class="card-bottom">
+                        <span class="tag local">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                            Local
+                        </span>
+                        <span class="usage">4.89k</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="DuckDB Knowledge Graph Memory Server" class="title-icon" src="https://icons.duckduckgo.com/ip3/duckdb.org.ico">
+                            <a href="#">DuckDB Knowledge Graph Memory Server</a>
+                        </h3>
+                        <div class="author"><a href="#">@IzumiSy/mcp-duckdb-memory-server</a></div>
+                    </div>
+                    <p class="description">Enhance your conversational agents with a robust memory system that efficiently retrieves and updates user information...</p>
+                     <div class="card-bottom">
+                        <span class="tag local">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                            Local
+                        </span>
+                        <span class="usage">598</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                            <img alt="Memory Box MCP Server" class="title-icon" src="https://icons.duckduckgo.com/ip3/memorybox.amotivv.ai.ico">
+                            <a href="#">Memory Box MCP Server</a>
+                        </h3>
+                        <div class="author"><a href="#">@amotivv/memory-box-mcp</a></div>
+                    </div>
+                    <p class="description">Save, search, and format memories with semantic understanding. Enhance your memory management by leveraging advanced semantic search...</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">11</span>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+         <section id="git-workflow">
+            <h2>数据库交互 <span class="section-count">(74)</span> <a href="#" class="view-all">View all</a></h2>
+             <div class="hub-grid">
+                 <div class="hub-card">
+                    <div class="card-top">
+                         <h3>
+                             <img alt="Github" class="title-icon" src="https://icons.duckduckgo.com/ip3/github.com.ico">
+                             <a href="#">Github</a>
+                        </h3>
+                        <div class="author"><a href="#">@smithery-ai/github</a></div>
+                    </div>
+                    <p class="description">Access the GitHub API, enabling file operations, repository management, search functionality, and more.</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                           Remote
+                        </span>
+                        <span class="usage">227.01k</span>
+                    </div>
+                 </div>
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Claude Code MCP Server</a></h3>
+                        <div class="author"><a href="#">@auchenberg/claude-code-mcp</a></div>
+                    </div>
+                    <p class="description">Leverage powerful software engineering capabilities through a standardized interface. Execute shell commands, analyze code...</p>
+                     <div class="card-bottom">
+                        <span class="tag local">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                           Local
+                        </span>
+                        <span class="usage">93.11k</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                             <img alt="Code MCP" class="title-icon" src="https://icons.duckduckgo.com/ip3/block.xyz.ico">
+                            <a href="#">Code MCP</a>
+                        </h3>
+                        <div class="author"><a href="#">@block/code-mcp</a></div>
+                    </div>
+                    <p class="description">Enable AI agents to seamlessly interact with VS Code, enhancing their capabilities to modify files, open projects...</p>
+                     <div class="card-bottom">
+                        <span class="tag local">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                           Local
+                        </span>
+                        <span class="usage">10.44k</span>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section id="weather-location">
+            <h2>图像生成和处理 <span class="section-count">(50)</span> <a href="#" class="view-all">View all</a></h2>
+            <div class="hub-grid">
+                <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Weather</a></h3>
+                        <div class="author"><a href="#">@turkyden/weather</a></div>
+                    </div>
+                    <p class="description">Provide r...(description truncated in source)...egration with the Cursor editor, allowing for natural language queries...</p>
+                    <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">62</span>
+                    </div>
+                </div>
+                <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Time Server</a></h3>
+                        <div class="author"><a href="#">mcp-timeserver</a></div>
+                    </div>
+                    <p class="description">Provide the current date and time in various timezones.</p>
+                    <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">94</span>
+                    </div>
+                </div>
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Tenki</a></h3>
+                        <div class="author"><a href="#">mcp-tenki</a></div>
+                    </div>
+                    <p class="description">Get weather updates for Japan.</p>
+                    <div class="card-bottom">
+                        <span class="tag remote">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">54</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="gmail-integration">
+             <h2>数据和应用生态系统 <span class="section-count">(38)</span> <a href="#" class="view-all">View all</a></h2>
+             <div class="hub-grid">
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                             <img alt="Google Workspace Server" class="title-icon" src="https://icons.duckduckgo.com/ip3/console.cloud.google.com.ico">
+                            <a href="#">Google Workspace Server</a>
+                        </h3>
+                        <div class="author"><a href="#">@rishipradeep-think41/gsuite-mcp</a></div>
+                    </div>
+                    <p class="description">Manage your emails and calendar events programmatically through a unified interface. Interact with Gmail and Calendar APIs...</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">8.00k</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Google Workspace MCP Server</a></h3>
+                        <div class="author"><a href="#">google-workspace-server</a></div>
+                    </div>
+                    <p class="description">Interact with Gmail and Calendar APIs via MCP interface.</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">7.53k</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Apple Tools Integration</a></h3>
+                        <div class="author"><a href="#">@Dhravya/apple-mcp</a></div>
+                    </div>
+                    <p class="description">Integrate with Apple applications to send and manage messages, emails, notes, contacts, and more.</p>
+                     <div class="card-bottom">
+                        <span class="tag local">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                            Local
+                        </span>
+                        <span class="usage">874</span>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+         <section id="data-ecosystems">
+             <h2>Web 内容和文档访问 <span class="section-count">(279)</span> <a href="#" class="view-all">View all</a></h2>
+             <div class="hub-grid">
+                 <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Think Tool Server</a></h3>
+                        <div class="author"><a href="#">@PhillipRt/think-mcp-server</a></div>
+                    </div>
+                    <p class="description">Enhance your AI's reasoning capabilities with structured thinking. This server provides a dedicated space for complex problem-solving...</p>
+                     <div class="card-bottom">
+                        <span class="tag remote">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">198.19k</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3><a href="#">Claude Code MCP Server</a></h3>
+                        <div class="author"><a href="#">@auchenberg/claude-code-mcp</a></div>
+                    </div>
+                    <p class="description">Leverage powerful software engineering capabilities through a standardized interface. Execute shell commands, analyze code...</p>
+                     <div class="card-bottom">
+                        <span class="tag local">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+                           Local
+                        </span>
+                        <span class="usage">93.11k</span>
+                    </div>
+                 </div>
+                  <div class="hub-card">
+                    <div class="card-top">
+                        <h3>
+                             <img alt="Figma API Integration" class="title-icon" src="https://icons.duckduckgo.com/ip3/www.figma.com.ico">
+                            <a href="#">Figma API Integration</a>
+                        </h3>
+                        <div class="author"><a href="#">@ai-zerolab/mcp-figma</a></div>
+                    </div>
+                    <p class="description">Access Figma's powerful API to manage files, comments, and components seamlessly. Enhance your AI assistant's capabilities...</p>
+                      <div class="card-bottom">
+                        <span class="tag remote">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            Remote
+                        </span>
+                        <span class="usage">21.24k</span>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>OMCP<span>Hub</span></h3>
-                    <p>您通往高级MCP服务器的门户</p>
+        <div class="footer-content">
+            <div>
+                <div class="logo">
+                    <img src="https://mintlify.s3.us-west-1.amazonaws.com/mcp/logo/dark.svg" alt="Omcphub Logo" width="160">
                 </div>
-                <div class="footer-links">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#servers">服务器</a></li>
-                        <li><a href="#features">特色</a></li>
-                        <li><a href="#about">关于</a></li>
-                        <li><a href="#contact">联系我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>关注我们</h4>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon">Facebook</a>
-                        <a href="#" class="social-icon">Twitter</a>
-                        <a href="#" class="social-icon">Discord</a>
-                        <a href="#" class="social-icon">YouTube</a>
-                    </div>
-                </div>
+                <p>MCP Server 仓库</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 OMCPHub. 保留所有权利。</p>
-            </div>
+        </div>
+        <div class="copy">
+            &copy; <span id="footer-year">2025</span> OMcpHub. All rights reserved.
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html> 
